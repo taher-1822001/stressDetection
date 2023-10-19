@@ -20,7 +20,7 @@ class UserRegistrationForm(forms.ModelForm):
     state = forms.CharField(widget=forms.TextInput(
         attrs={'autocomplete': 'off', 'pattern': '[A-Za-z ]+', 'title': 'Enter Characters Only '}), required=True,
                             max_length=100)
-    status = forms.CharField(widget=forms.HiddenInput(), initial='waiting', max_length=100)
+    status = forms.CharField(widget=forms.HiddenInput(), initial='activated', max_length=100)
 
     class Meta():
         model = UserRegistrationModel
