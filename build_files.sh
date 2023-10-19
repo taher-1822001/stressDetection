@@ -5,6 +5,10 @@ cd Python-3.7.2
 ./configure --enable-optimizations
 make altinstall
 python3.7 --version
+ls
+pip --version
+pip install --upgrade pip
+pip --version
 cd ..
 python3.7 -m pip install -r requirements.txt
 python3.7 manage.py collectstatic --noinput --clear
