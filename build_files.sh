@@ -10,6 +10,7 @@ ls
 pip --version
 cd ..
 pip --version
+pip install venv
 python -m venv virtualEnv
 ./virtualEnv/Scripts/activate.bat
 pip install --upgrade pip
