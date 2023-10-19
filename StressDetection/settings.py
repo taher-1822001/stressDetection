@@ -25,7 +25,7 @@ SECRET_KEY = '@=sbu6*esnixm37fq329)!qn#5*m27*sey%5pmfb#g+=qw+88('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'admins',
+    'StressDetection'
 ]
 
 MIDDLEWARE = [
@@ -71,7 +72,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'StressDetection.wsgi.application'
+WSGI_APPLICATION = 'StressDetection.wsgi.app'
+# WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 
 # Database
