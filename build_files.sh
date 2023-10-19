@@ -9,9 +9,10 @@ python3.7 --version
 ls
 pip --version
 pip install --upgrade pip
+pip install "Django==3.2.19"
 pip --version
 cd ..
-python3.7 --version
-python3.7 -m pip install -r requirements.txt
-python3.7 manage.py collectstatic --noinput --clear
+python --version
+python -m pip install -r requirements.txt
+python manage.py collectstatic --noinput --clear
 echo "BUILD END"
