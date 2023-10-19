@@ -25,12 +25,12 @@ SECRET_KEY = '@=sbu6*esnixm37fq329)!qn#5*m27*sey%5pmfb#g+=qw+88('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
