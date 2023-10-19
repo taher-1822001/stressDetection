@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 # Application definition
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
