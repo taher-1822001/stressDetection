@@ -25,12 +25,12 @@ SECRET_KEY = '@=sbu6*esnixm37fq329)!qn#5*m27*sey%5pmfb#g+=qw+88('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'admins',
-    'StressDetection'
 ]
 
 MIDDLEWARE = [
@@ -72,8 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'StressDetection.wsgi.app'
-# WSGI_APPLICATION = 'vercel_app.wsgi.app'
+WSGI_APPLICATION = 'StressDetection.wsgi.application'
 
 
 # Database
@@ -81,8 +79,13 @@ WSGI_APPLICATION = 'StressDetection.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':'my_db',
+        'USER': 'project_st',
+        'PASSWORD': '12Project123',
+        'HOST': 'database.cdchaawlvqxn.ap-south-1.rds.amazonaws.com',
+        'PORT':'5432',
+         
     }
 }
 
@@ -123,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-# STATIC_URL = '/static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets/static'), ]
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

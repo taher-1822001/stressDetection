@@ -5,6 +5,7 @@ charset-normalizer==3.1.0
 colorama==0.4.6
 cycler==0.11.0
 Django==3.2.19
+django-cockroachdb==3.2.4
 exceptiongroup==1.1.1
 facenet-pytorch==2.5.3
 idna==3.4
@@ -20,6 +21,7 @@ pandas==1.0.1
 Pillow==9.5.0
 pluggy==1.2.0
 progress==1.6
+psycopg2==2.9.9
 PyEmotion==0.0.5
 pyparsing==3.1.0
 pytest==7.4.0
