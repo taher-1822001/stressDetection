@@ -12,10 +12,10 @@ cd ..
 pip --version
 pip install venv
 python -m venv virtualEnv
-./virtualEnv/Scripts/activate.bat
+./virtualEnv/bin/activate
 pip install --upgrade pip
-python --version
+python3.7 --version
 pip install "Django==3.2.19"
-python -m pip install -r requirements.txt
-python manage.py collectstatic --noinput --clear
+python3.7 -m pip install -r requirements.txt
+python3.7 manage.py collectstatic --noinput --clear
 echo "BUILD END"
